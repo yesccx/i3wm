@@ -96,9 +96,27 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```
 
 ##### 配置及安装插件
-编辑`~/.zshrc`文件，参考[zshrc配置文件](Software/Zsh/zshrc)，主要配置项是
-- 插件：`plugins` 第71行
-- 历史记录显示时间：`HIST_STAMPS` 第61行
+```
+cd ~/.oh-my-zsh/plugins
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git // 安装 zsh-syntax-highlighting 插件
+```
+之后编辑`~/.zshrc`文件，参考[zshrc配置文件](Software/Zsh/zshrc)，主要配置项是
+- 加入一些插件：`plugins` 第71行
+- 使history显示时间：`HIST_STAMPS` 第61行
+
+配置完成后执行`source ~/.zshrc` 重载或重启电脑
+
+### Xfce4-Terminal
+Xfce终端，代替默认的终端
+
+#### 安装
+```
+sudo pacman -S xfce4-terminal
+```
+
+#### 配置
+参考[Xfce4-Terminal配置文件](Software/Xfce4-Terminal)，同时设置i3的快捷打开的终端为`xfce-terminal`
+
 
 
 ### Docker
