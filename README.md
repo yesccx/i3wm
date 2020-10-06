@@ -15,7 +15,7 @@ sudo pacman -Syu // 更新数据源
 
 ### 安装中文字体包
 
-随便安装一个中文字体包即可，之后在打开 `manjaro-setings-manager`设置本地为`中文`
+随便安装一个中文字体包即可，之后在打开 `manjaro-setings-manager`设置本地语言为`中文`
 
 #### 文泉中文字体
 
@@ -58,10 +58,21 @@ sudo pacman -S google-chrome
 ```
 
 #### 使用
-默认没开全局代理的情况下，需要在启用chrome时手动指定，可以通过以下命令启动（通常情况下需要替换端口号）
+默认没开全局代理的情况下，需要在启用Chrome时手动指定代理（与v2ray配合），可以通过以下命令启动（通常情况下需要替换端口号）
 ```
 google-chrome-stable --proxy-server="127.0.0.1:1080" // 更多请查看 man google-chrome-stable
 ```
+
+#### 配置
+
+##### 扩展SwitchyOmega
+导入配置 [SwitchyOmega.bak](Software/Chrome/SwitchyOmega.bak)
+
+##### 更换默认浏览器为Chrome
+```
+echo "export BROWSER=/usr/bin/google-chrome-stable" >> ~/.profile
+```
+同时编辑 ~/.config/mimeapps.list 替换所有关键字`userapp-Pale Moon`为`google-chrome`，原因是因为`Pale Moon`是默认的浏览器
 
 
 ### Zsh
@@ -73,16 +84,21 @@ sudo pacman -S zsh
 
 #### 配置
 
-更换用户的默认shell
+##### 更换默认shell
 ```
-chsh -s path/bin/zsh root // 如: chsh -s /bin/zsh yesc
+chsh -s path/bin/zsh 用户名 // 如: chsh -s /bin/zsh yesc
 ```
 
-安装oh-my-zsh
+##### 安装oh-my-zsh
 > 可能由于网络原因安装不成功，可以在能访问这个install.sh文件的电脑上获取到源代码或git pull这个源文件安装
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+
+##### 配置及安装插件
+编辑`~/.zshrc`文件，参考[zshrc配置文件](Software/Zsh/zshrc)，主要配置项是
+- 插件：`plugins` 第71行
+- 历史记录显示时间：`HIST_STAMPS` 第61行
 
 
 ### Docker
