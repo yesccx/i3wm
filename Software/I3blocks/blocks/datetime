@@ -1,0 +1,7 @@
+#!/bin/bash
+
+DATETIME=$(date "+%m-%d %A %H:%M:%S")
+
+echo "${DATETIME}"
+echo "${DATETIME}"
+echo ""
