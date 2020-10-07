@@ -1,4 +1,9 @@
 # Manjaro i3wm
+i3wm安装与配置记录，目前只是拿来自用，很多地方没做过多说明
+
+- 版本：Manjaro-i3 20.1.1
+- 内核：Linux 5.8.11-1
+
 
 ## 基础配置
 
@@ -57,7 +62,7 @@ sudo pacman -Syu // 更新数据源
 > 可以视情况调整DPI
 
 ### 配置i3wm
-参考[i3wm相关配置文件](i3wm/.i3/config)，直接覆盖文件或对比修改（不存在时手动创建即可）。
+参考[i3wm相关配置文件](I3wm/.i3/config)，直接覆盖文件或对比修改（不存在时手动创建即可）。
 ```
 ~/.i3/config
 ```
@@ -294,6 +299,20 @@ sudo pacman -S clipit
 ├── clipitrc
 ```
 
+### Variety
+管理和设置壁纸
+
+#### 安装
+```
+sudo pacman -S variety
+```
+
+### Postman
+
+#### 安装
+```
+sudo pacman -S postman
+```
 
 ### Docker
 
@@ -330,3 +349,12 @@ sudo systemctl enable docker // 设置开机启动
 exec --no-startup-id fcitx
 ```
 具体参考[手册](https://i3wm.org/docs/userguide.html#exec)
+
+### 开机后蓝牙没有开启？
+具体参考[手册](https://wiki.archlinux.org/index.php/Bluetooth_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%BC%80%E6%9C%BA%E5%90%8E%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8)
+
+### 扩展屏幕
+具体参考[手册](https://wiki.archlinux.org/index.php/Xrandr_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+
+### 获取窗口信息
+执行`xprop`然后鼠标点击一个窗口
