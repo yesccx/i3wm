@@ -314,12 +314,32 @@ sudo pacman -S variety
 sudo pacman -S postman
 ```
 
-### Docker
+## 开发相关
 
+### Node和Npm
+
+#### 安装
+```
+sudo pacman -S nodejs && sudo pacman -S yarn
+```
+
+#### 配置
+yarn 镜像加速，具体参考[淘宝镜像说明文件](https://developer.aliyun.com/mirror/NPM?from=tnpm)
+```
+yarn config set registry https://registry.npm.taobao.org
+```
+
+### Docker和Docker-Compose
+
+#### 安装
 ```
 sudo pacman -S docker docker-compose // 安装
 sudo systemctl enable docker // 设置开机启动
 ```
+
+#### 配置
+docker镜像加速配置[手册](https://lug.ustc.edu.cn/wiki/mirrors/help/docker/)
+
 
 
 ## 其它设置
