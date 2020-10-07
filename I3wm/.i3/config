@@ -245,7 +245,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="XMind"] floating enable
-for_window [class="V2Ray-Desktop"] floating enable
+for_window [class="qv2ray"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -318,7 +318,7 @@ exec --no-startup-id clipit
 exec --no-startup-id xautolock -time 30 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec --no-startup-id v2ray-desktop
+exec --no-startup-id qv2ray
 exec --no-startup-id fcitx
 exec --no-startup-id flameshot
 

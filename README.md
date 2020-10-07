@@ -135,18 +135,18 @@ exec --no-startup-id fcitx
 > 注意，修改`fcitx`配置要在退出`fcitx`的情况下进行，否则配置文件会被重写为初始值
 
 ### V2ray
-代理工具使用的是V2ray-Desktop
+GUI使用的是qv2ray
 
 #### 安装
 ```
-sudo pacman -S v2ray-desktop
+sudo pacman -S v2ray qv2ray
 ```
 
 #### 配置
-同时配置`V2ray-Desktop`自启动，参考[配置i3wm](#配置i3wm)
+同时配置`qv2ray`自启动，参考[配置i3wm](#配置i3wm)
 ```
 vim ~/.i3/config // 找到 # Autostart applications 区，加入或修改为以下行
-exec --no-startup-id v2ray-desktop
+exec --no-startup-id qv2ray
 ```
 
 ### Google-Chrome
