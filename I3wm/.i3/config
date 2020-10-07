@@ -30,6 +30,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
 
+# start a screenshot
+bindsym $mod+Shift+a exec flameshot
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -317,6 +320,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id v2ray-desktop
 exec --no-startup-id fcitx
+exec --no-startup-id flameshot
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
