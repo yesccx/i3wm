@@ -314,6 +314,15 @@ sudo pacman -S variety
 sudo pacman -S postman
 ```
 
+### mycli
+代替mysql-cli
+
+#### 安装
+```
+sudo pacman -S mycli
+```
+
+
 ## 开发相关
 
 ### Node和Npm
