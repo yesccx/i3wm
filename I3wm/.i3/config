@@ -30,8 +30,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
 
-# start a screenshot
-bindsym $mod+Shift+a exec flameshot
+# 截图
+bindsym $mod+Shift+a exec flameshot gui
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -196,7 +196,8 @@ assign [class="Google-chrome"] $ws2
 assign [class="Code"] $ws3
 
 # ws4
-assign [class="Pcmanfm"] $ws4
+# assign [class="Pcmanfm"] $ws4
+assign [class="Wps"] $ws4
 
 # ws5
 assign [class="electronic-wechat"] $ws5
@@ -246,6 +247,13 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="XMind"] floating enable
 for_window [class="qv2ray"] floating enable
+for_window [class="flameshot"] floating enable
+for_window [class="Postman"] floating enable
+for_window [class="Xarchiver"] floating enable
+for_window [class="Pcmanfm"] floating enable
+for_window [class="JetBrains Toolbox"] floating enable
+for_window [class="jetbrains-phpstorm"] floating enable
+for_window [class="Telegram"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -305,7 +313,7 @@ bindsym $mod+l exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec_always --no-startup-id nitrogen --restore; sleep 1; picom -b --config ~/.config/picom/config
+exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 #exec --no-startup-id xfce4-power-manager
@@ -320,7 +328,6 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id qv2ray
 exec --no-startup-id fcitx
-exec --no-startup-id flameshot
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -357,7 +364,7 @@ set_from_resource $term_color15    color15
 bar {
 	#i3bar_command i3bar
 	#status_command i3status
-	status_command i3blocks -c ~/.config/i3blocks/config
+	status_command i3blocks -c ~/.i3/i3blocks.conf
 	position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
