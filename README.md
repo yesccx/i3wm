@@ -347,15 +347,29 @@ sudo systemctl enable docker // 设置开机启动
 ```
 
 #### 配置
+
 docker镜像加速配置[手册](https://lug.ustc.edu.cn/wiki/mirrors/help/docker/)
 
-
+将当前用户加入docker组，否则当前用户可能没用使用权限（需要sudo）
+```
+sudo groupadd docker          #添加docker用户组
+sudo gpasswd -a $USER docker  #将当前用户添加至docker用户组
+newgrp docker                 #更新docker用户组
+```
 
 ## 其它设置
 
 ### 设置本地时间
 
 打开 `manjaro-setings-manager` 在 `时间和日期中` 勾选 `自动设置时间和日期`
+
+## DPI
+
+主要修改`.Xresources`文件中的`Xft.dpi`，个别应用需要单独修改
+
+### rofi启用器 DPI
+
+修改主题文件的`#window`中的`font`字体大小
 
 
 ## 相关问题
@@ -387,3 +401,15 @@ exec --no-startup-id fcitx
 
 ### 获取窗口信息
 执行`xprop`然后鼠标点击一个窗口
+
+### 没有声音？
+
+```
+systemctl --user restat pulseaudio
+```
+
+### 查看系统信息
+
+```
+inxi -Fx
+```
