@@ -349,6 +349,17 @@ sudo systemctl enable docker // 设置开机启动
 #### 配置
 
 docker镜像加速配置[手册](https://lug.ustc.edu.cn/wiki/mirrors/help/docker/)
+```
+/etc/docker/daemon.json
+
+{
+ "registry-mirrors": [
+ "https://dockerhub.azk8s.cn",
+ "https://reg-mirror.qiniu.com",
+ "https://docker.mirrors.ustc.edu.cn",
+ ]
+}
+```
 
 将当前用户加入docker组，否则当前用户可能没用使用权限（需要sudo）
 ```
