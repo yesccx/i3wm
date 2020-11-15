@@ -416,8 +416,12 @@ exec --no-startup-id fcitx
 ### 没有声音？
 
 ```
-systemctl --user restat pulseaudio
+systemctl --user restat pulseaudio sof-firmware
 ```
+
+### 声音过小？
+
+打开 alsamixer，找到正确的channel
 
 ### 查看系统信息
 
