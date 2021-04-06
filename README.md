@@ -284,6 +284,24 @@ status_command i3blocks -c ~/.config/i3blocks/config
 sudo pacman -S flameshot
 ```
 
+#### 配置
+`flameshot` 是用QT编写的，所以为了能够让截图时的操作编辑框能够输入中文(fcitx)，需要在环境变量中导入 `QT_IM_MODULE=fcitx`。且需要在截图操作之前启动守护进程`flameshot`，这样才能让`flameshot gui`截图时支持中文输入
+
+1. 导入环境变量
+   ```
+   vim ~/.xprofile
+
+   export QT_IM_MODULE=fcitx
+   ```
+
+2. 配置守护进程启用
+    ```
+    vim ~/.i3/config
+
+    # 在适当的位置加入启动项(实际上可以任意位置)
+    exec --no-startup-id flameshot
+    ```
+
 ### Clipit
 通常不需要再次安装，manjaro-i3版自带
 
