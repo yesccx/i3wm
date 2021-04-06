@@ -446,3 +446,7 @@ systemctl --user restat pulseaudio sof-firmware
 ```
 inxi -Fx
 ```
+
+### 更换系统启动时的背景图
+
+manjaro i3wm用的启动器是`lightdm`，可以通过运行`lightdm-settings`打开gui界面进行设置。需要注意的是，如果想使用自定义背景图，需要将背景图放置在`/usr/share/pixmaps`目录下才有效，同时要保证背景图文件的读取权限。
