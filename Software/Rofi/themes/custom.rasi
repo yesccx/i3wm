@@ -4,7 +4,7 @@
  * Copyright: Rasmus Steinke
  *******************************************************************************/
 
-* {
+ * {
     selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
     foreground:                  rgba ( 193, 193, 193, 100 % );
     normal-foreground:           @foreground;
@@ -39,7 +39,7 @@
     background-color: rgba ( 39, 50, 56, 100 % );
     border:           0;
     padding:          20;
-    font:         "Source Code Pro bold 17";
+    font:         "Source Code Pro bold 20";
 }
 #mainbox {
     border:  0;
@@ -63,6 +63,12 @@
 }
 #element {
     border:  0;
+    padding: 1px ;
+}
+
+#element-text {
+    background-color: inherit;
+    text-color:       inherit;
     padding: 1px ;
 }
 #element.normal.normal {
